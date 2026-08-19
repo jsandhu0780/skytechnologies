@@ -6,6 +6,11 @@
 <title>Jashan Sandhu — Sky Technologies | Multicloud, automation &amp; on-prem infrastructure</title>
 <meta name="description" content="Jashan Sandhu — Senior Systems Engineer in Toronto. Multicloud architecture on AWS and Azure, infrastructure automation, Kubernetes, and hybrid on-premises platforms.">
 <link rel="canonical" href="https://skytechnologies.ca/">
+<meta name="theme-color" content="#0A1019">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta property="og:title" content="Jashan Sandhu — Sky Technologies">
 <meta property="og:description" content="Multicloud architecture, infrastructure automation, and hybrid platforms. Senior Systems Engineer, Greater Toronto Area.">
@@ -14,254 +19,343 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Martian+Mono:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --ink:      #071A2C;
-    --ink-soft: #2C4256;
-    --muted:    #5A6B7C;
-    --line:     #D7E1EA;
-    --paper:    #F5F8FB;
-    --white:    #FFFFFF;
-    --brand:    #0D4FA8;
-    --brand-dk: #093A7C;
-    --haze:     #57C4E5;
+    /* NOC at 2am */
+    --void:   #0A1019;
+    --panel:  #101A26;
+    --panel2: #16222F;
+    --rule:   #1E2E3F;
+    --rule2:  #2A3E52;
+    --text:   #C7D6E4;
+    --bright: #EAF2F9;
+    --dim:    #7C93A8;
+    --dimmer: #556B7F;
+    --cyan:   #45D0E8;
+    --amber:  #F2A93B;
+    --blue:   #4A8FD8;
 
-    --f-display: 'Archivo', system-ui, sans-serif;
+    --f-display: 'Martian Mono', ui-monospace, monospace;
     --f-body:    'IBM Plex Sans', system-ui, sans-serif;
-    --f-mono:    'IBM Plex Mono', ui-monospace, monospace;
+    --f-mono:    'JetBrains Mono', ui-monospace, monospace;
 
-    --shell: 1140px;
-    --gut: 24px;
+    --shell: 1160px;
+    --gut: 22px;
   }
 
   *{ box-sizing:border-box; }
   html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
   body{
-    margin:0; background:var(--white); color:var(--ink);
-    font-family:var(--f-body); font-size:17px; line-height:1.62;
+    margin:0; background:var(--void); color:var(--text);
+    font-family:var(--f-body); font-size:16.5px; line-height:1.65;
     -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(rgba(69,208,232,.055) 1px, transparent 1px);
+    background-size:32px 32px;
   }
   img{ max-width:100%; display:block; }
-  a{ color:var(--brand); text-decoration:none; }
+  a{ color:var(--cyan); text-decoration:none; }
   a:hover{ text-decoration:underline; }
-  :focus-visible{ outline:2.5px solid var(--brand); outline-offset:3px; border-radius:2px; }
+  :focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; border-radius:2px; }
+  ::selection{ background:rgba(69,208,232,.28); color:var(--bright); }
 
   .shell{ width:100%; max-width:var(--shell); margin:0 auto; padding:0 var(--gut); }
 
-  h1,h2,h3{ font-family:var(--f-display); font-weight:700; letter-spacing:-0.02em; line-height:1.08; margin:0; }
-  h1{ font-size:clamp(2.25rem, 5.6vw, 3.9rem); }
-  h2{ font-size:clamp(1.7rem, 3.5vw, 2.5rem); }
-  h3{ font-size:1.12rem; letter-spacing:-0.01em; line-height:1.3; }
-  p{ margin:0 0 1.1em; }
+  h1,h2{
+    font-family:var(--f-display); font-weight:700;
+    letter-spacing:-0.035em; line-height:1.14; margin:0; color:var(--bright);
+  }
+  h1{ font-size:clamp(1.65rem, 5.2vw, 3.35rem); }
+  h2{ font-size:clamp(1.28rem, 3vw, 1.95rem); }
+  h3{
+    font-family:var(--f-body); font-weight:600; font-size:1.08rem;
+    line-height:1.35; margin:0; color:var(--bright); letter-spacing:-0.005em;
+  }
+  p{ margin:0 0 1.05em; }
   p:last-child{ margin-bottom:0; }
 
   .eyebrow{
-    font-family:var(--f-mono); font-size:0.72rem; font-weight:500;
-    letter-spacing:0.16em; text-transform:uppercase; color:var(--brand);
-    margin:0 0 14px;
+    font-family:var(--f-mono); font-size:0.71rem; font-weight:500;
+    letter-spacing:0.2em; text-transform:uppercase; color:var(--cyan);
+    margin:0 0 16px;
   }
+  .eyebrow::before{ content:'// '; color:var(--dimmer); }
 
   /* ---------- Header ---------- */
   .masthead{
-    position:sticky; top:0; z-index:50;
-    background:rgba(255,255,255,0.9); backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:60;
+    background:rgba(10,16,25,.88); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--rule);
   }
-  .masthead-in{ display:flex; align-items:center; justify-content:space-between; height:68px; }
+  .masthead-in{ display:flex; align-items:center; justify-content:space-between; height:64px; }
   .wordmark{
     display:flex; align-items:center; gap:10px;
-    font-family:var(--f-display); font-weight:700; font-size:1.05rem;
-    letter-spacing:-0.02em; color:var(--ink); text-decoration:none;
+    font-family:var(--f-display); font-weight:700; font-size:0.86rem;
+    letter-spacing:-0.03em; color:var(--bright); text-decoration:none;
   }
   .wordmark:hover{ text-decoration:none; }
-  .glyph{ width:22px; height:22px; flex:none; }
-  .nav{ display:flex; align-items:center; gap:28px; }
-  .nav a{ font-size:0.9rem; color:var(--ink-soft); text-decoration:none; }
-  .nav a:hover{ color:var(--brand); text-decoration:none; }
-  @media (max-width:820px){ .nav a.nav-hide{ display:none; } }
+  .glyph{ width:20px; height:20px; flex:none; }
+  .caret{
+    display:inline-block; width:8px; height:15px; background:var(--cyan);
+    margin-left:2px; animation:blink 1.15s steps(1) infinite;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+  .nav{ display:flex; align-items:center; gap:26px; }
+  .nav a{
+    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.03em;
+    color:var(--dim); text-decoration:none;
+  }
+  .nav a:hover{ color:var(--cyan); text-decoration:none; }
+  @media (max-width:840px){ .nav a.nav-hide{ display:none; } }
 
   .btn{
-    display:inline-block; font-family:var(--f-body); font-size:0.94rem; font-weight:500;
-    padding:12px 22px; border-radius:4px; border:1px solid var(--brand);
-    background:var(--brand); color:#fff; text-decoration:none;
-    transition:background .18s ease;
+    display:inline-block; font-family:var(--f-mono); font-size:0.79rem; font-weight:500;
+    letter-spacing:0.04em; padding:10px 18px; border-radius:3px;
+    border:1px solid var(--cyan); background:rgba(69,208,232,.1); color:var(--cyan);
+    text-decoration:none; transition:background .16s ease, color .16s ease;
   }
-  .btn:hover{ background:var(--brand-dk); border-color:var(--brand-dk); text-decoration:none; }
-  .btn-ghost{ background:transparent; color:var(--brand); }
-  .btn-ghost:hover{ background:rgba(13,79,168,0.06); color:var(--brand-dk); }
-  .btn-sm{ padding:9px 18px; font-size:0.88rem; }
+  .btn:hover{ background:var(--cyan); color:var(--void); text-decoration:none; }
+  .btn-quiet{ border-color:var(--rule2); background:transparent; color:var(--dim); }
+  .btn-quiet:hover{ border-color:var(--cyan); background:transparent; color:var(--cyan); }
 
   /* ---------- Hero ---------- */
-  .hero{
-    position:relative; overflow:hidden;
-    padding:clamp(60px, 10vw, 118px) 0 clamp(52px, 7vw, 88px);
-    background:linear-gradient(178deg, #EDF4FB 0%, #F7FAFD 46%, #FFFFFF 100%);
-    border-bottom:1px solid var(--line);
+  .hero{ position:relative; padding:clamp(46px, 8vw, 88px) 0 clamp(44px, 6vw, 72px); overflow:hidden; }
+  .hero::after{
+    content:''; position:absolute; left:0; right:0; top:0; height:340px; pointer-events:none;
+    background:radial-gradient(60% 100% at 20% 0%, rgba(69,208,232,.10), transparent 70%);
   }
-  .hero-grid{
-    position:absolute; inset:0; pointer-events:none; opacity:.5;
-    background-image:linear-gradient(to right, rgba(13,79,168,.07) 1px, transparent 1px);
-    background-size:76px 100%;
-    mask-image:linear-gradient(to bottom, #000 0%, transparent 78%);
-    -webkit-mask-image:linear-gradient(to bottom, #000 0%, transparent 78%);
-  }
-  .hero-in{ position:relative; max-width:880px; }
-  .hero h1{ margin-bottom:26px; }
-  .hero h1 .lift{ color:var(--brand); }
-  .lede{ font-size:clamp(1.04rem, 1.9vw, 1.26rem); color:var(--ink-soft); max-width:64ch; }
-  .hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
-  .hero-meta{
-    display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:44px;
-    font-family:var(--f-mono); font-size:0.75rem; letter-spacing:0.05em;
-    color:var(--muted); text-transform:uppercase;
-  }
+  .hero-in{ position:relative; }
+  .hero h1{ max-width:15ch; margin-bottom:24px; }
+  .hero h1 em{ font-style:normal; color:var(--cyan); }
+  .lede{ font-size:clamp(1rem, 1.7vw, 1.16rem); color:var(--dim); max-width:64ch; }
+  .lede b{ color:var(--text); font-weight:500; }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
 
-  .rise{ opacity:0; transform:translateY(14px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
-  .rise-2{ animation-delay:.09s; }
-  .rise-3{ animation-delay:.18s; }
-  .rise-4{ animation-delay:.27s; }
-  @keyframes rise{ to{ opacity:1; transform:none; } }
+  /* ---------- Terminal (signature) ---------- */
+  .term{
+    margin-top:44px; border:1px solid var(--rule2); border-radius:6px;
+    background:linear-gradient(180deg, var(--panel2), var(--panel));
+    box-shadow:0 20px 50px -28px rgba(0,0,0,.9);
+    overflow:hidden; max-width:820px;
+  }
+  .term-bar{
+    display:flex; align-items:center; gap:8px;
+    padding:10px 14px; border-bottom:1px solid var(--rule);
+    background:rgba(255,255,255,.02);
+  }
+  .dot{ width:9px; height:9px; border-radius:50%; background:var(--rule2); }
+  .dot.a{ background:#E05C5C; } .dot.b{ background:var(--amber); } .dot.c{ background:#4FBF7B; }
+  .term-title{
+    font-family:var(--f-mono); font-size:0.7rem; letter-spacing:0.08em;
+    color:var(--dimmer); margin-left:8px;
+  }
+  .term-body{
+    font-family:var(--f-mono); font-size:0.82rem; line-height:1.85;
+    padding:20px 18px 22px; margin:0; white-space:pre-wrap; word-break:break-word;
+    min-height:212px; color:var(--text);
+  }
+  .term-body .ps1{ color:var(--amber); }
+  .term-body .out{ color:var(--dim); }
+  .term-body .hi{ color:var(--cyan); }
+  .cursor{
+    display:inline-block; width:7px; height:14px; background:var(--cyan);
+    vertical-align:-2px; animation:blink 1.15s steps(1) infinite;
+  }
+  @media (max-width:520px){ .term-body{ font-size:0.74rem; min-height:236px; } }
 
   /* ---------- Sections ---------- */
-  .band{ padding:clamp(58px, 7.5vw, 100px) 0; }
-  .band-paper{ background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-  .band-ink{ background:var(--ink); color:#DCE7F1; }
-  .section-head{ max-width:64ch; margin-bottom:46px; }
-  .section-head p{ color:var(--muted); font-size:1.04rem; margin-top:16px; }
-  .band-ink .section-head p{ color:#9DB2C6; }
-  .band-ink .eyebrow{ color:var(--haze); }
-  .band-ink h2{ color:#fff; }
+  .band{ padding:clamp(56px, 7vw, 92px) 0; border-top:1px solid var(--rule); }
+  .band-alt{ background:rgba(16,26,38,.5); }
+  .section-head{ max-width:62ch; margin-bottom:42px; }
+  .section-head p{ color:var(--dim); font-size:1.01rem; margin-top:14px; }
 
-  /* ---------- Capability cards ---------- */
-  .cards{ display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-  @media (min-width:700px){ .cards{ grid-template-columns:1fr 1fr; } }
-  .card{ background:var(--white); padding:32px 30px; }
-  .card h3{ margin-bottom:12px; }
-  .card p{ color:var(--muted); font-size:0.97rem; }
-  .card-mark{
-    font-family:var(--f-mono); font-size:0.7rem; letter-spacing:0.14em;
-    color:var(--haze); text-transform:uppercase; margin-bottom:16px;
+  /* ---------- Capabilities ---------- */
+  .cards{ display:grid; gap:14px; }
+  @media (min-width:760px){ .cards{ grid-template-columns:1fr 1fr; } }
+  .card{
+    background:var(--panel); border:1px solid var(--rule); border-radius:5px;
+    padding:26px 24px; transition:border-color .16s ease;
   }
+  .card:hover{ border-color:var(--rule2); }
+  .card h3{ margin-bottom:10px; }
+  .card p{ color:var(--dim); font-size:0.95rem; }
+  .card-mark{
+    font-family:var(--f-mono); font-size:0.69rem; letter-spacing:0.16em;
+    color:var(--dimmer); text-transform:uppercase; margin-bottom:14px;
+  }
+  .card-mark::before{ content:'▸ '; color:var(--cyan); }
 
-  /* ---------- Stack (signature) ---------- */
-  .stack{ display:flex; flex-direction:column-reverse; gap:1px; }
+  /* ---------- Stack (rack elevation) ---------- */
+  .rack{
+    display:flex; flex-direction:column-reverse;
+    border:1px solid var(--rule); border-radius:5px; overflow:hidden; background:var(--panel);
+  }
   .layer{
     display:grid; grid-template-columns:1fr; gap:8px;
-    padding:24px 0 22px; border-top:1px solid rgba(255,255,255,0.12);
-    position:relative;
+    padding:22px 22px 20px; border-top:1px solid var(--rule); position:relative;
   }
-  @media (min-width:860px){
-    .layer{ grid-template-columns:180px 1fr 340px; gap:32px; align-items:baseline; }
+  .layer:first-child{ border-top:0; }
+  @media (min-width:880px){
+    .layer{ grid-template-columns:196px 1fr 336px; gap:28px; align-items:start; }
   }
   .layer-name{
-    font-family:var(--f-display); font-weight:600; font-size:1.02rem;
-    color:#fff; letter-spacing:-0.01em;
+    font-family:var(--f-body); font-weight:600; font-size:1rem; color:var(--bright);
   }
   .layer-name span{
-    display:block; font-family:var(--f-mono); font-weight:400; font-size:0.68rem;
-    letter-spacing:0.13em; text-transform:uppercase; margin-top:5px; color:#7E97AE;
+    display:block; font-family:var(--f-mono); font-weight:400; font-size:0.67rem;
+    letter-spacing:0.13em; text-transform:uppercase; margin-top:6px; color:var(--dimmer);
   }
-  .layer-desc{ font-size:0.96rem; color:#B7C7D6; }
-  .tags{ display:flex; flex-wrap:wrap; gap:7px; margin:2px 0 0; padding:0; list-style:none; }
+  .layer-desc{ font-size:0.94rem; color:var(--dim); }
+  .tags{ display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; list-style:none; }
   .tags li{
-    font-family:var(--f-mono); font-size:0.72rem;
-    padding:4px 9px; border-radius:3px;
-    background:rgba(87,196,229,0.1); color:#A9D9EC;
-    border:1px solid rgba(87,196,229,0.18);
+    font-family:var(--f-mono); font-size:0.7rem;
+    padding:3px 8px; border-radius:2px;
+    background:rgba(69,208,232,.07); color:#95C9D9;
+    border:1px solid rgba(69,208,232,.16);
   }
   .altitude{
     position:absolute; left:0; top:-1px; height:2px; width:0;
-    background:var(--strip); transition:width 1s cubic-bezier(.2,.7,.2,1);
+    background:var(--strip); transition:width .95s cubic-bezier(.2,.7,.2,1);
   }
   .layer.lit .altitude{ width:100%; }
-  .stack-foot{
-    font-family:var(--f-mono); font-size:0.72rem; letter-spacing:0.13em;
-    text-transform:uppercase; color:#6D869C; margin-top:24px;
+  .rack-foot{
+    display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:space-between;
+    font-family:var(--f-mono); font-size:0.69rem; letter-spacing:0.13em;
+    text-transform:uppercase; color:var(--dimmer); margin-top:16px;
   }
   .thread{
-    margin-top:34px; padding:22px 24px; border-radius:6px;
-    background:rgba(87,196,229,0.06); border:1px solid rgba(87,196,229,0.16);
-    font-size:0.96rem; color:#B7C7D6;
+    margin-top:24px; padding:20px 22px; border-radius:5px;
+    background:rgba(242,169,59,.05); border:1px solid rgba(242,169,59,.2);
+    font-size:0.95rem; color:var(--dim);
   }
-  .thread strong{ color:#fff; font-weight:600; }
+  .thread strong{ color:var(--amber); font-weight:600; }
 
-  /* ---------- Experience timeline ---------- */
-  .roles{ border-top:1px solid var(--line); }
+  /* ---------- Experience ---------- */
+  .roles{ position:relative; }
   .role{
     display:grid; grid-template-columns:1fr; gap:6px;
-    padding:30px 0; border-bottom:1px solid var(--line);
+    padding:0 0 34px 26px; position:relative;
   }
-  @media (min-width:820px){
-    .role{ grid-template-columns:210px 1fr; gap:40px; }
+  .role::before{
+    content:''; position:absolute; left:4px; top:9px; bottom:-9px; width:1px; background:var(--rule2);
+  }
+  .role:last-child::before{ bottom:auto; height:0; }
+  .role::after{
+    content:''; position:absolute; left:0; top:6px; width:9px; height:9px;
+    border-radius:50%; background:var(--void); border:2px solid var(--cyan);
+  }
+  .role.past::after{ border-color:var(--rule2); }
+  @media (min-width:860px){
+    .role{ grid-template-columns:216px 1fr; gap:36px; padding-left:26px; }
   }
   .role-when{
-    font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.04em;
-    color:var(--muted); padding-top:4px;
+    font-family:var(--f-mono); font-size:0.75rem; letter-spacing:0.02em; color:var(--dimmer);
   }
-  .role-when b{ display:block; color:var(--brand); font-weight:500; margin-bottom:4px; }
-  .role h3{ margin-bottom:4px; }
+  .role-when b{ display:block; color:var(--cyan); font-weight:500; margin-bottom:3px; letter-spacing:0.03em; }
+  .role.past .role-when b{ color:var(--dim); }
+  .role h3{ margin-bottom:3px; }
   .role-org{
-    font-family:var(--f-mono); font-size:0.8rem; letter-spacing:0.05em;
-    color:var(--ink-soft); margin:0 0 14px;
+    font-family:var(--f-mono); font-size:0.77rem; letter-spacing:0.05em;
+    color:var(--amber); margin:0 0 12px;
   }
-  .role ul{ margin:0; padding-left:20px; }
-  .role li{ margin-bottom:8px; color:var(--muted); font-size:0.97rem; }
+  .role ul{ margin:0; padding:0; list-style:none; }
+  .role li{
+    margin-bottom:7px; color:var(--dim); font-size:0.94rem; padding-left:16px; position:relative;
+  }
+  .role li::before{ content:'·'; position:absolute; left:2px; color:var(--rule2); }
   .role li:last-child{ margin-bottom:0; }
-  .role li strong{ color:var(--ink-soft); font-weight:600; }
+  .role li strong{ color:var(--text); font-weight:500; }
 
   /* ---------- About ---------- */
-  .about{ display:grid; gap:44px; }
-  @media (min-width:900px){ .about{ grid-template-columns:1.3fr 1fr; gap:72px; } }
-  .about-body p{ font-size:1.03rem; color:var(--ink-soft); }
-  .facts{ margin:0; padding:0; border-top:1px solid var(--line); }
-  .facts div{ padding:16px 0; border-bottom:1px solid var(--line); }
+  .about{ display:grid; gap:38px; }
+  @media (min-width:920px){ .about{ grid-template-columns:1.3fr 1fr; gap:64px; } }
+  .about-body p{ font-size:1rem; color:var(--dim); }
+  .about-body p b{ color:var(--text); font-weight:500; }
+  .facts{ margin:0; padding:0; border-top:1px solid var(--rule); }
+  .facts div{ padding:14px 0; border-bottom:1px solid var(--rule); }
   .facts dt{
-    font-family:var(--f-mono); font-size:0.7rem; letter-spacing:0.13em;
-    text-transform:uppercase; color:var(--muted); margin-bottom:5px;
+    font-family:var(--f-mono); font-size:0.68rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--dimmer); margin-bottom:4px;
   }
-  .facts dd{ margin:0; font-size:0.97rem; color:var(--ink); }
+  .facts dd{ margin:0; font-size:0.94rem; color:var(--text); }
 
-  /* ---------- Certifications ---------- */
-  .certs{ display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-top:40px; }
-  @media (min-width:640px){ .certs{ grid-template-columns:1fr 1fr; } }
-  @media (min-width:960px){ .certs{ grid-template-columns:repeat(3,1fr); } }
-  .cert{ background:var(--white); padding:22px 24px; }
-  .cert h3{ font-size:0.98rem; margin-bottom:6px; }
-  .cert p{
-    font-family:var(--f-mono); font-size:0.72rem; letter-spacing:0.05em;
-    color:var(--muted); text-transform:uppercase;
-  }
+  .certs{ display:grid; gap:12px; margin-top:36px; }
+  @media (min-width:660px){ .certs{ grid-template-columns:repeat(3,1fr); } }
+  .cert{ background:var(--panel); border:1px solid var(--rule); border-radius:5px; padding:20px; }
+  .cert h3{ font-size:0.94rem; margin-bottom:6px; }
+  .cert p{ font-family:var(--f-mono); font-size:0.69rem; letter-spacing:0.06em; color:var(--dimmer); text-transform:uppercase; }
 
   /* ---------- Contact ---------- */
   .contact-in{ max-width:680px; }
-  .contact-in h2{ margin-bottom:18px; }
-  .contact-in p{ color:var(--muted); font-size:1.05rem; }
-  .mailto{
-    font-family:var(--f-display); font-weight:600;
-    font-size:clamp(1.25rem, 3.2vw, 1.85rem); letter-spacing:-0.02em;
-    display:inline-block; margin-top:24px; color:var(--brand);
-    border-bottom:2px solid rgba(13,79,168,0.25); text-decoration:none;
+  .contact-in h2{ margin-bottom:16px; }
+  .contact-in > p{ color:var(--dim); font-size:1.01rem; }
+  .prompt{
+    display:block; margin-top:26px; padding:18px 20px;
+    background:var(--panel); border:1px solid var(--rule2); border-radius:5px;
+    font-family:var(--f-mono); font-size:clamp(0.82rem, 2.4vw, 1.05rem);
+    color:var(--cyan); text-decoration:none; word-break:break-all;
+    transition:border-color .16s ease, background .16s ease;
   }
-  .mailto:hover{ text-decoration:none; border-bottom-color:var(--brand); }
-  .elsewhere{ display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+  .prompt:hover{ border-color:var(--cyan); background:var(--panel2); text-decoration:none; }
+  .prompt i{ font-style:normal; color:var(--amber); }
+  .elsewhere{ display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+
+  /* ---------- Contact form ---------- */
+  .form{ margin-top:28px; display:grid; gap:16px; }
+  @media (min-width:640px){ .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; } }
+  .field{ display:flex; flex-direction:column; gap:7px; }
+  .field + .field{ margin-top:16px; }
+  @media (min-width:640px){ .form-row .field + .field{ margin-top:0; } }
+  .field label{
+    font-family:var(--f-mono); font-size:0.69rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--dim);
+  }
+  .field label span{ color:var(--amber); }
+  .field input, .field textarea{
+    font-family:var(--f-body); font-size:0.95rem; color:var(--bright);
+    background:var(--panel); border:1px solid var(--rule2); border-radius:4px;
+    padding:11px 13px; width:100%; transition:border-color .16s ease, background .16s ease;
+  }
+  .field textarea{ resize:vertical; min-height:130px; line-height:1.6; }
+  .field input:focus, .field textarea:focus{
+    outline:none; border-color:var(--cyan); background:var(--panel2);
+  }
+  .field input::placeholder, .field textarea::placeholder{ color:var(--dimmer); }
+  .hp{ position:absolute; left:-9999px; opacity:0; height:0; overflow:hidden; }
+  .form-send{
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:4px;
+  }
+  .form-send button{
+    font-family:var(--f-mono); font-size:0.8rem; font-weight:500; letter-spacing:0.04em;
+    padding:12px 22px; border-radius:3px; cursor:pointer;
+    border:1px solid var(--cyan); background:rgba(69,208,232,.12); color:var(--cyan);
+    transition:background .16s ease, color .16s ease;
+  }
+  .form-send button:hover{ background:var(--cyan); color:var(--void); }
+  .form-send button:disabled{ opacity:.5; cursor:default; background:transparent; color:var(--dim); border-color:var(--rule2); }
+  .form-msg{ font-family:var(--f-mono); font-size:0.8rem; color:var(--dim); }
+  .form-msg.ok{ color:#4FBF7B; }
+  .form-msg.err{ color:#E05C5C; }
+  .fallback{
+    margin-top:22px; padding-top:20px; border-top:1px solid var(--rule);
+    font-size:0.9rem; color:var(--dimmer);
+  }
 
   /* ---------- Footer ---------- */
-  .foot{ border-top:1px solid var(--line); padding:32px 0; }
+  .foot{ border-top:1px solid var(--rule); padding:26px 0 34px; }
   .foot-in{
-    display:flex; flex-wrap:wrap; gap:12px 28px; justify-content:space-between;
-    font-family:var(--f-mono); font-size:0.74rem; letter-spacing:0.05em; color:var(--muted);
+    display:flex; flex-wrap:wrap; gap:10px 26px; justify-content:space-between;
+    font-family:var(--f-mono); font-size:0.71rem; letter-spacing:0.05em; color:var(--dimmer);
   }
-  .foot-in a{ color:var(--muted); }
+  .foot-in a{ color:var(--dim); }
 
-  .skip{ position:absolute; left:-9999px; top:0; background:#fff; padding:12px 18px; z-index:100; }
+  .skip{ position:absolute; left:-9999px; top:0; background:var(--panel); color:var(--bright); padding:12px 18px; z-index:100; }
   .skip:focus{ left:12px; top:12px; }
 
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
     html{ scroll-behavior:auto; }
-    .rise{ opacity:1; transform:none; }
     .altitude{ width:100%; }
   }
 </style>
@@ -273,18 +367,18 @@
 <header class="masthead">
   <div class="shell masthead-in">
     <a class="wordmark" href="#top">
-      <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="1" y="15" width="22" height="2.4" rx="1" fill="#093A7C"/>
-        <rect x="4" y="10" width="16" height="2.4" rx="1" fill="#0D4FA8"/>
-        <rect x="7" y="5" width="10" height="2.4" rx="1" fill="#57C4E5"/>
+      <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M24 30 L40 37 L24 44 L8 37 Z" fill="#2A3E52"/>
+        <path d="M24 20 L40 27 L24 34 L8 27 Z" fill="#2E6FAF"/>
+        <path d="M24 10 L40 17 L24 24 L8 17 Z" fill="#45D0E8"/>
       </svg>
-      Sky Technologies
+      sky_technologies<span class="caret" aria-hidden="true"></span>
     </a>
     <nav class="nav" aria-label="Sections">
-      <a class="nav-hide" href="#capabilities">Capabilities</a>
-      <a class="nav-hide" href="#stack">Stack</a>
-      <a class="nav-hide" href="#experience">Experience</a>
-      <a class="btn btn-ghost btn-sm" href="#contact">Get in touch</a>
+      <a class="nav-hide" href="#capabilities">capabilities</a>
+      <a class="nav-hide" href="#stack">stack</a>
+      <a class="nav-hide" href="#experience">experience</a>
+      <a class="btn" href="#contact">get in touch</a>
     </nav>
   </div>
 </header>
@@ -294,20 +388,22 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero-grid" aria-hidden="true"></div>
   <div class="shell hero-in">
-    <p class="eyebrow rise">Jashan Sandhu · Brampton, Ontario</p>
-    <h1 class="rise rise-2">I've run infrastructure at every altitude — from the rack in the room <span class="lift">to the region in the cloud.</span></h1>
-    <p class="lede rise rise-3">Senior Systems Engineer working across AWS, Azure, and on-premises platforms. Ten years spent making enterprise infrastructure scalable, secure, and cheaper to run — starting on a datacenter floor and ending up architecting the multicloud environments that replaced it.</p>
-    <div class="hero-actions rise rise-4">
-      <a class="btn" href="#contact">Get in touch</a>
-      <a class="btn btn-ghost" href="#stack">See the stack</a>
+    <p class="eyebrow">Jashan Sandhu · Brampton, Ontario</p>
+    <h1>Infrastructure at <em>every altitude</em></h1>
+    <p class="lede">Senior Systems Engineer working across AWS, Azure, and on-premises platforms. <b>Ten years</b> spent making enterprise infrastructure scalable, secure, and cheaper to run — starting on a datacenter floor and ending up architecting the multicloud environments that replaced it.</p>
+
+    <div class="term" role="img" aria-label="Terminal session: whoami returns Jashan Sandhu, Senior Systems Engineer. uptime returns 10 years across 4 employers with 13 certifications. Stack listed by altitude: datacenter, virtualization, cloud, automation, platform.">
+      <div class="term-bar">
+        <span class="dot a"></span><span class="dot b"></span><span class="dot c"></span>
+        <span class="term-title">jsandhu@sky — bash</span>
+      </div>
+      <pre class="term-body" id="term"></pre>
     </div>
-    <div class="hero-meta rise rise-4">
-      <span>10+ years in infrastructure</span>
-      <span>13 certifications</span>
-      <span>CKA · AWS Advanced Networking</span>
-      <span>M.S. Information Systems Security</span>
+
+    <div class="hero-actions">
+      <a class="btn" href="#contact">get in touch</a>
+      <a class="btn btn-quiet" href="#stack">view the stack</a>
     </div>
   </div>
 </section>
@@ -322,22 +418,22 @@
     </div>
     <div class="cards">
       <article class="card">
-        <p class="card-mark">Multicloud</p>
+        <p class="card-mark">multicloud</p>
         <h3>Architecture on AWS and Azure</h3>
         <p>Cloud-native environments designed for availability and fault tolerance rather than assembled by default — landing zones, network topology, identity, and the boundaries between workloads.</p>
       </article>
       <article class="card">
-        <p class="card-mark">Automation</p>
+        <p class="card-mark">automation</p>
         <h3>Infrastructure as code and CI/CD</h3>
         <p>Environments defined in Terraform and CloudFormation, deployed through pipelines in Azure DevOps, Jenkins, or CodePipeline. If a change is made by hand, it isn't finished.</p>
       </article>
       <article class="card">
-        <p class="card-mark">Hybrid</p>
+        <p class="card-mark">hybrid</p>
         <h3>On-prem that still has a job to do</h3>
         <p>vSphere estates, storage, and physical networking kept healthy alongside cloud — including the migrations where workloads move up and the ones where they stay put for good reasons.</p>
       </article>
       <article class="card">
-        <p class="card-mark">Operations</p>
+        <p class="card-mark">operations</p>
         <h3>Cost, performance, and security</h3>
         <p>Monitoring that catches problems before users do, tuning that keeps latency flat, and spend reviews that cut cloud bills without quietly trading away resilience.</p>
       </article>
@@ -345,8 +441,8 @@
   </div>
 </section>
 
-<!-- ============ STACK — signature ============ -->
-<section class="band band-ink" id="stack">
+<!-- ============ STACK ============ -->
+<section class="band band-alt" id="stack">
   <div class="shell">
     <div class="section-head">
       <p class="eyebrow">Technical depth</p>
@@ -354,54 +450,44 @@
       <p>Read it from the bottom up — that's also the order I learned it in, starting in a server room and working upward.</p>
     </div>
 
-    <div class="stack" id="stackList">
-      <div class="layer" style="--strip:#071A2C">
+    <div class="rack" id="stackList">
+      <div class="layer" style="--strip:#2A3E52">
         <span class="altitude" aria-hidden="true"></span>
-        <div class="layer-name">Datacenter <span>Layer 01 · Ground</span></div>
+        <div class="layer-name">Datacenter <span>L01 · ground</span></div>
         <p class="layer-desc">Physical hosts, power and cooling, capacity planning, and the on-call rotations that keep thousands of servers answering.</p>
-        <ul class="tags">
-          <li>Red Hat Linux</li><li>Bare metal</li><li>Capacity planning</li><li>Hardware triage</li><li>SLA / on-call</li>
-        </ul>
+        <ul class="tags"><li>Red Hat Linux</li><li>Bare metal</li><li>Capacity planning</li><li>Hardware triage</li><li>SLA / on-call</li></ul>
       </div>
 
-      <div class="layer" style="--strip:#0D4FA8">
+      <div class="layer" style="--strip:#4A8FD8">
         <span class="altitude" aria-hidden="true"></span>
-        <div class="layer-name">Virtualization <span>Layer 02</span></div>
+        <div class="layer-name">Virtualization <span>L02</span></div>
         <p class="layer-desc">The abstraction that made everything above it possible — clustered hypervisors with high availability, fault tolerance, and tested recovery.</p>
-        <ul class="tags">
-          <li>VMware vSphere</li><li>ESXi</li><li>vCenter</li><li>Site Recovery Manager</li><li>Storage &amp; SAN</li>
-        </ul>
+        <ul class="tags"><li>VMware vSphere</li><li>ESXi</li><li>vCenter</li><li>Site Recovery Manager</li><li>Storage &amp; SAN</li></ul>
       </div>
 
-      <div class="layer" style="--strip:#2C82C9">
+      <div class="layer" style="--strip:#3FB0DE">
         <span class="altitude" aria-hidden="true"></span>
-        <div class="layer-name">Cloud platforms <span>Layer 03</span></div>
+        <div class="layer-name">Cloud platforms <span>L03</span></div>
         <p class="layer-desc">Enterprise workloads architected across two providers, with the networking and identity design that decides whether the rest of it holds together.</p>
-        <ul class="tags">
-          <li>AWS</li><li>Microsoft Azure</li><li>VPC / VNet design</li><li>IAM</li><li>Cost optimization</li><li>Migration</li>
-        </ul>
+        <ul class="tags"><li>AWS</li><li>Microsoft Azure</li><li>VPC / VNet design</li><li>IAM</li><li>Cost optimization</li><li>Migration</li></ul>
       </div>
 
-      <div class="layer" style="--strip:#57C4E5">
+      <div class="layer" style="--strip:#45D0E8">
         <span class="altitude" aria-hidden="true"></span>
-        <div class="layer-name">Automation <span>Layer 04</span></div>
+        <div class="layer-name">Automation <span>L04</span></div>
         <p class="layer-desc">Infrastructure declared in code and shipped through pipelines, so environments are reproducible and every change has a commit behind it.</p>
-        <ul class="tags">
-          <li>Terraform</li><li>CloudFormation</li><li>Azure DevOps</li><li>Jenkins</li><li>AWS CodePipeline</li><li>Git / BitBucket</li>
-        </ul>
+        <ul class="tags"><li>Terraform</li><li>CloudFormation</li><li>Azure DevOps</li><li>Jenkins</li><li>AWS CodePipeline</li><li>Git / BitBucket</li></ul>
       </div>
 
-      <div class="layer" style="--strip:#9DDCF0">
+      <div class="layer" style="--strip:#8EE7F5">
         <span class="altitude" aria-hidden="true"></span>
-        <div class="layer-name">Platform &amp; visibility <span>Layer 05 · Sky</span></div>
+        <div class="layer-name">Platform &amp; visibility <span>L05 · sky</span></div>
         <p class="layer-desc">Where applications actually live now, and the instrumentation that makes their behaviour legible at three in the morning.</p>
-        <ul class="tags">
-          <li>Kubernetes</li><li>Docker</li><li>Datadog</li><li>CloudWatch</li><li>Azure Monitor</li>
-        </ul>
+        <ul class="tags"><li>Kubernetes</li><li>Docker</li><li>Datadog</li><li>CloudWatch</li><li>Azure Monitor</li></ul>
       </div>
     </div>
 
-    <p class="stack-foot">Ground → Sky · ten years, bottom to top</p>
+    <p class="rack-foot"><span>ground → sky</span><span>ten years, bottom to top</span></p>
 
     <p class="thread"><strong>Security and networking run vertically through all five.</strong> A master's in information systems security and an AWS Advanced Networking specialty mean the segmentation, routing, and access model get designed in at the start rather than audited in at the end.</p>
   </div>
@@ -417,7 +503,7 @@
 
     <div class="roles">
       <article class="role">
-        <div class="role-when"><b>Sep 2024 — Present</b>Toronto, Ontario · Hybrid</div>
+        <div class="role-when"><b>2024.09 — present</b>Toronto, Ontario · hybrid</div>
         <div>
           <h3>Senior Systems Engineer</h3>
           <p class="role-org">OMERS</p>
@@ -428,8 +514,8 @@
         </div>
       </article>
 
-      <article class="role">
-        <div class="role-when"><b>Jun 2020 — Aug 2024</b>Toronto, Ontario · Remote</div>
+      <article class="role past">
+        <div class="role-when"><b>2020.06 — 2024.08</b>Toronto, Ontario · remote</div>
         <div>
           <h3>Cloud / DevOps Engineer</h3>
           <p class="role-org">Rackspace Technology</p>
@@ -443,13 +529,13 @@
         </div>
       </article>
 
-      <article class="role">
-        <div class="role-when"><b>Jan 2018 — Jun 2020</b>Greater Toronto Area · On-site</div>
+      <article class="role past">
+        <div class="role-when"><b>2018.01 — 2020.06</b>Greater Toronto Area · on-site</div>
         <div>
           <h3>Cloud Engineer / Solution Integrator</h3>
           <p class="role-org">FlexITy Solutions Inc.</p>
           <ul>
-            <li>Designed <strong>three-tier application architectures</strong> on AWS and Azure — front end, middle tier, and back end — using cloud-native services for high availability and fault tolerance.</li>
+            <li>Designed <strong>three-tier application architectures</strong> on AWS and Azure using cloud-native services for high availability and fault tolerance.</li>
             <li>Maintained a vSphere estate of <strong>40 ESXi hosts running 700+ virtual machines</strong> with vCenter, vCAC, and Site Recovery Manager.</li>
             <li>Deployed vSphere infrastructure with HA and fault tolerance, integrated with enterprise storage.</li>
             <li>Led root-cause analysis on escalated virtualization and datacenter incidents in client environments.</li>
@@ -457,8 +543,8 @@
         </div>
       </article>
 
-      <article class="role">
-        <div class="role-when"><b>Aug 2016 — Jan 2018</b>Markham, Ontario · On-site</div>
+      <article class="role past">
+        <div class="role-when"><b>2016.08 — 2018.01</b>Markham, Ontario · on-site</div>
         <div>
           <h3>Datacenter Operations</h3>
           <p class="role-org">SoftLayer, an IBM Company</p>
@@ -474,23 +560,23 @@
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section class="band band-paper" id="about">
+<section class="band band-alt" id="about">
   <div class="shell">
     <div class="about">
       <div class="about-body">
         <p class="eyebrow">Background</p>
         <h2>Cloud engineering, learned from the ground floor</h2>
-        <p style="margin-top:22px">I'm Jashan Sandhu, a Senior Systems Engineer based in Brampton, Ontario. I design, deploy, and operate cloud infrastructure across public and private platforms — and because I started in a datacenter rather than a console, I tend to know what the abstraction is actually sitting on.</p>
+        <p style="margin-top:20px">I'm Jashan Sandhu, a Senior Systems Engineer based in Brampton, Ontario. I design, deploy, and operate cloud infrastructure across public and private platforms — and because I <b>started in a datacenter rather than a console</b>, I tend to know what the abstraction is actually sitting on.</p>
         <p>That path runs through hardware operations, VMware estates, and integration work before it reaches multicloud architecture, which is why hybrid environments hold no mystery for me. Most organizations aren't purely cloud or purely on-prem; they're mid-migration, indefinitely, and the engineering that matters happens at the seam.</p>
         <p>Alongside the technical work I spend a lot of time translating it — turning architecture decisions into terms a stakeholder can weigh, and staying the point of contact between the technical and business sides of a project. Sky Technologies is where I collect that work.</p>
       </div>
       <dl class="facts">
-        <div><dt>Currently</dt><dd>Senior Systems Engineer at OMERS</dd></div>
-        <div><dt>Based in</dt><dd>Brampton, Greater Toronto Area</dd></div>
-        <div><dt>Focus</dt><dd>Multicloud · Automation · On-prem</dd></div>
-        <div><dt>Master's degree</dt><dd>Information Systems Security, Concordia University</dd></div>
-        <div><dt>Bachelor's degree</dt><dd>Computer Science &amp; Engineering, B.Tech.</dd></div>
-        <div><dt>Certifications</dt><dd>13, including CKA and AWS Advanced Networking – Specialty</dd></div>
+        <div><dt>currently</dt><dd>Senior Systems Engineer at OMERS</dd></div>
+        <div><dt>based in</dt><dd>Brampton, Greater Toronto Area</dd></div>
+        <div><dt>focus</dt><dd>Multicloud · Automation · On-prem</dd></div>
+        <div><dt>master's degree</dt><dd>Information Systems Security, Concordia University</dd></div>
+        <div><dt>bachelor's degree</dt><dd>Computer Science &amp; Engineering, B.Tech.</dd></div>
+        <div><dt>certifications</dt><dd>13, including CKA and AWS Advanced Networking – Specialty</dd></div>
       </dl>
     </div>
 
@@ -517,11 +603,41 @@
     <p class="eyebrow">Get in touch</p>
     <h2>Happy to talk infrastructure</h2>
     <p>Whether it's a migration you're scoping, an environment that costs more than it should, or a role you think I'd fit — send a note and I'll come back to you.</p>
-    <a class="mailto" href="mailto:jsandhu@skytechnologies.com">jsandhu@skytechnologies.com</a>
-    <div class="elsewhere">
-      <a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/jashan-sandhu/">LinkedIn</a>
-      <a class="btn btn-ghost btn-sm" href="#experience">Experience</a>
-    </div>
+    <form class="form" id="contactForm" novalidate>
+      <!-- Replace with your own Web3Forms access key — see setup notes -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="New enquiry from skytechnologies.ca">
+      <input type="hidden" name="from_name" value="skytechnologies.ca">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+      <div class="form-row">
+        <div class="field">
+          <label for="cf-name">Name <span>*</span></label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="cf-email">Email <span>*</span></label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="cf-org">Company</label>
+        <input id="cf-org" name="company" type="text" autocomplete="organization" placeholder="Optional">
+      </div>
+
+      <div class="field">
+        <label for="cf-msg">What do you need <span>*</span></label>
+        <textarea id="cf-msg" name="message" required placeholder="A migration you're scoping, an environment that costs too much, a role you're hiring for — whatever it is, a couple of sentences is plenty."></textarea>
+      </div>
+
+      <div class="form-send">
+        <button type="submit" id="cf-send">send message</button>
+        <p class="form-msg" id="cf-msg-out" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <p class="fallback">Prefer email? <a href="mailto:jsandhu@skytechnologies.ca">jsandhu@skytechnologies.ca</a> — or find me on <a href="https://www.linkedin.com/in/jashan-sandhu/">LinkedIn</a>.</p>
   </div>
 </section>
 </main>
@@ -529,13 +645,139 @@
 <footer class="foot">
   <div class="shell foot-in">
     <span>© <span id="yr">2026</span> Sky Technologies · Jashan Sandhu · Ontario, Canada</span>
-    <span><a href="mailto:jsandhu@skytechnologies.com">jsandhu@skytechnologies.com</a> · <a href="https://www.linkedin.com/in/jashan-sandhu/">LinkedIn</a></span>
+    <span><a href="mailto:jsandhu@skytechnologies.ca">jsandhu@skytechnologies.ca</a> · <a href="https://www.linkedin.com/in/jashan-sandhu/">linkedin</a></span>
   </div>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
+  /* --- Terminal session --- */
+  var TERM = document.getElementById('term');
+  var LINES = [
+    { t: 'cmd', s: 'whoami' },
+    { t: 'out', s: 'Jashan Sandhu — Senior Systems Engineer' },
+    { t: 'cmd', s: 'uptime' },
+    { t: 'out', s: '10 years · 4 employers · 13 certifications' },
+    { t: 'cmd', s: 'stack --order=altitude' },
+    { t: 'out', s: 'datacenter → virtualization → cloud → automation → platform' },
+    { t: 'cmd', s: 'contact' }
+  ];
+  var PS1 = 'jsandhu@sky:~$ ';
+
+  function esc(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function renderAll(){
+    var html = '';
+    LINES.forEach(function(l){
+      if (l.t === 'cmd') html += '<span class="ps1">' + PS1 + '</span>' + esc(l.s) + '\n';
+      else html += '<span class="out">' + esc(l.s) + '</span>\n';
+    });
+    html += '<span class="ps1">' + PS1 + '</span><a class="hi" href="#contact">jsandhu@skytechnologies.ca</a>';
+    TERM.innerHTML = html;
+  }
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduce) {
+    renderAll();
+  } else {
+    var done = '';
+    var li = 0;
+
+    function finish(){
+      TERM.innerHTML = done + '<span class="ps1">' + PS1 + '</span>' +
+        '<a class="hi" href="#contact">jsandhu@skytechnologies.ca</a>' +
+        '<span class="cursor"></span>';
+    }
+
+    function typeLine(){
+      if (li >= LINES.length) { finish(); return; }
+      var line = LINES[li];
+
+      if (line.t === 'out') {
+        done += '<span class="out">' + esc(line.s) + '</span>\n';
+        TERM.innerHTML = done + '<span class="cursor"></span>';
+        li++;
+        setTimeout(typeLine, 320);
+        return;
+      }
+
+      if (li === LINES.length - 1) { finish(); return; }
+
+      var i = 0;
+      var head = done + '<span class="ps1">' + PS1 + '</span>';
+      (function step(){
+        TERM.innerHTML = head + esc(line.s.slice(0, i)) + '<span class="cursor"></span>';
+        if (i < line.s.length) { i++; setTimeout(step, 34); }
+        else {
+          done = head + esc(line.s) + '\n';
+          li++;
+          setTimeout(typeLine, 260);
+        }
+      })();
+    }
+    setTimeout(typeLine, 420);
+  }
+
+  /* --- Contact form --- */
+  (function(){
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+    var out = document.getElementById('cf-msg-out');
+    var send = document.getElementById('cf-send');
+
+    function say(text, cls){
+      out.textContent = text;
+      out.className = 'form-msg' + (cls ? ' ' + cls : '');
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      var message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        say('Name, email, and a message are required.', 'err');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        say('That email address does not look right.', 'err');
+        return;
+      }
+
+      send.disabled = true;
+      say('sending…');
+
+      var payload = Object.fromEntries(new FormData(form));
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data.success) {
+          form.reset();
+          say('Sent. I will get back to you shortly.', 'ok');
+        } else {
+          say('Could not send. Email jsandhu@skytechnologies.ca instead.', 'err');
+        }
+        send.disabled = false;
+      })
+      .catch(function(){
+        say('Could not send. Email jsandhu@skytechnologies.ca instead.', 'err');
+        send.disabled = false;
+      });
+    });
+  })();
+
+  /* --- Rack layers light up bottom to top --- */
   var layers = Array.prototype.slice.call(document.querySelectorAll('#stackList .layer')).reverse();
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
